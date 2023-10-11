@@ -1,0 +1,44 @@
+### Get products
+GET {{host}}/products
+
+### Get 1 product
+GET {{host}}/product/1000
+
+### Post list products
+POST {{host}}/products
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "code": "plzooqs30",
+    "name": "Toy",
+    "description": "Product Description",
+    "price": 16,
+    "quantity": 260,
+    "inventoryStatus": "INSTOCK",
+    "category": "Game",
+    "image": "Toy.jpg",
+    "rating": 7
+  }
+]
+
+### Delete 1 product
+DELETE {{host}}/product/1
+
+### Patch 1 product
+PATCH {{host}}/product/1000
+Content-Type: application/json
+
+{
+  "id": 1000,
+  "code": "f230fh0g3",
+  "name": "Bamboo Watch",
+  "description": "Product Description",
+  "price": 70,
+  "quantity": 0,
+  "inventoryStatus": "HORS STOCK",
+  "category": "Accessories",
+  "image": "bamboo-watch.jpg",
+  "rating": 7
+}
